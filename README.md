@@ -1,59 +1,70 @@
-# Exploring AirBnB in Athens
+# 🏠 Exploring AirBnB in Athens
 
-A lot has been said and written about the effect of AirBnB in Athens. In this assignment, you will use the data collected by [Inside AirBnB](http://insideairbnb.com), so you can go ahead and download the Athens data from http://insideairbnb.com/get-the-data.html.
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?logo=jupyter&logoColor=white)](https://jupyter.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Once you do that, spend some time familiarizing yourself with the data and then go ahead and do the following tasks.
-## Neighbourhood Listings in Descending Order
+An exploratory data analysis of Airbnb listings in Athens, Greece, using data from Inside Airbnb. This analysis investigates various aspects of the short-term rental market in Athens, including neighborhood distributions, pricing patterns, and host behaviors.
 
-Show the listings per neighbourghood, with the most popular neighbourhoods first (that is, in decreasing neighbourhood popularity order).
-## Neighbourhood Prices in Descending Order
+## ✨ Features
 
-Create a table with the prices per neighbourhood. The prices information should contain:
+1. **Neighborhood Analysis**
+   - Distribution of listings across neighborhoods
+   - Interactive choropleth maps
+   - Price statistics by neighborhood
 
-* median price per neighbourhood
+2. **Temporal Analysis**
+   - Daily availability patterns
+   - Price variations over time
+   - Seasonal trends identification
 
-* mean price per neighbourhood
+3. **Host & Property Analysis**
+   - Distribution of listings per host
+   - Room type analysis
+   - Review patterns and occupancy rates
 
-* standard deviation per neighbourhood
+4. **Interactive Visualizations**
+   - Interactive maps with listing details
+   - Dynamic price trend plots
 
-* number of listings per neighbourhood.
+## 🛠️ Installation
 
-The contents of the table should be in descending median prices.
-## Availability per Day
+1. Clone the repository:
+```bash
+git clone https://github.com/marsidmali/Exploring-AirBnB-in-Athens.git
+cd Exploring-AirBnB-in-Athens
+```
 
-Create a plot with the number of listings available per day, on the $y$ axis, and the date, on the $x$ axis.
-## Reviews, Occupacy per Listing, Average Income
+2. Create and activate a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 
-Create a histogram showing the number of reviews per listing. The histogram should bin the number of reviews, from the smallest amount of reviews in a listing, to the maximum number of reviews in a listing rounded up to the closest hundred.
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-Once you have done that, calculate the average occupacy per listing per month. To calculate that, find the average reviews per month and assume that half of the bookings result in reviews.
+## 📊 Data Source
 
-Then, assuming that each booking is for a three nights stay, calculate the average income per month, using the average price charged throughout all listings.
-## Listings per Room Type
+The analysis uses data from [Inside Airbnb](http://insideairbnb.com/get-the-data.html), specifically:
+- Detailed listings data
+- Calendar data
+- Reviews data
+- Neighborhood geojson data
 
-Show the number of listings per room type, in absolute numbers, and also in percentages (the percentage of listings for each particular room type). Then, show the number of listings per neighrbourhood and room type.
-## Prices per Day
+## 🗺️ Interactive Map
 
-Create a table with the average price per listing per day. Draw a graph visualizing the table.
-## Listings per Host
+The project includes an interactive map visualization (`map.html`) that shows:
+- All Airbnb listings in Athens
+- Cluster visualization for better performance
+- Popup information for each listing including:
+  - Listing name and URL
+  - Host information
+  - Availability and pricing
+  - Property details
 
-Create a table with the number of listings per host, in descending order. Create a graph that will show the distribution of listings per host, as follows:
+## 📝 License
 
-* You will rank the host on a number of listings basis. So, the first host will be the one with the largest number of listings, the second host will be the one with the second largest number of listings, etc. If there is a number of hosts with the same listings, just add them in sequence. For instance, if there are 10 hosts with one listing each, add them in the ranking with any order between them.
-
-* On the $y$ axis you will have the number of listings.
-
-That is, a point $(x, y)$ will mean that the $x$-th highest hosting host has $y$ listings.
-
-After you have drawn the plot, do another one, this time with the $x$ axis in *logarithmic* scale.
-## Visualize Listings
-
-Draw an interactive map to show the listings ovelayed on Athens.
-
-You can use the [folium](https://github.com/python-visualization/folium) library to create your map; spend some time reading the documentation.
-
-The map should show each listing and on clicking on top of it, the user should see a short description of the listing.
-
-Note that such a map is heavy on resources. You will probably *not* be able to include it in a Jupyter notebook, so you should save it to an external HTML file that can be opened by any browser. Also, to make things easier, you make wish to limit the maximum zoom level from 12 to 15 (after you read folium's documentation you will know what this is).
-
-Hint: be careful witht he description data, if they contain some characters they may not be rendered in HTML and may destroy your output.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
