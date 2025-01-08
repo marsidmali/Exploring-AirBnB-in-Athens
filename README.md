@@ -46,6 +46,16 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+## 🚀 Usage
+
+1. Launch Jupyter Notebook:
+```bash
+jupyter notebook
+```
+
+2. Open `rogets_thesaurus_analysis.ipynb`
+3. Run all cells to perform the analysis
+
 ## 📊 Data Source
 
 The analysis uses data from [Inside Airbnb](http://insideairbnb.com/get-the-data.html), specifically:
