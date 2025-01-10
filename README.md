@@ -53,7 +53,7 @@ pip install -r requirements.txt
 jupyter notebook
 ```
 
-2. Open `rogets_thesaurus_analysis.ipynb`
+2. Open `Exploring AirBnB in Athens.ipynb`
 3. Run all cells to perform the analysis
 
 ## 📊 Data Source
